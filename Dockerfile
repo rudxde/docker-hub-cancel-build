@@ -1,2 +1,2 @@
 FROM node:16
-RUN npm init
+RUN npm init -y
