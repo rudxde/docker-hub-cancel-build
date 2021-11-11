@@ -1,2 +1,8 @@
 #!/bin/bash
-exit 0
+
+
+if [[ -z "${DO_BUILD}" ]]; then
+  docker build --build-arg APP=$APP -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+else
+  docker pull $IMAGE_NAME
+fi
